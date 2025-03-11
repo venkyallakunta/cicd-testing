@@ -11,7 +11,7 @@ from sklearn.metrics import confusion_matrix, precision_score, f1_score, recall_
 sns.set(style='white')
 
 # Load Data
-dataset = pd.read_csv(r"C:\Users\venka\Downloads\iris.csv")
+dataset = pd.read_csv(r'C:\Users\A3MAX SOFTWARE TECH\A VS CODE\CICD\code-2\iris.csv')
 
 # Feature names (Ensure no extra spaces or parentheses)
 dataset.columns = [colname.strip(' (cm)').replace(" ", "_") for colname in dataset.columns.tolist()]
@@ -22,7 +22,7 @@ dataset['sepal_length_width_ratio'] = dataset['sepal_length'] / dataset['sepal_w
 dataset['petal_length_width_ratio'] = dataset['petal_length'] / dataset['petal_width']
 
 # Select Features (Correct the duplicate column issue)
-dataset = dataset[['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 
+dataset = dataset[['sepal_length', 'sepal_width', 'petal_length', 'petal_width',
                    'sepal_length_width_ratio', 'petal_length_width_ratio', 'target']]
 
 # Split Data
